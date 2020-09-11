@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        Play guess the pattern games.
+        <input type="text" name="input" id="input" value="000">
+        <input type="button" onclick="submitAnswer()" value="submit Pattern">
+        <div id="response">
+        </div>
+        
+        <script>
+            //Defines
+            var patternLength =3;
+
+            var hiddenPattern = getRandomPattern();
+            var inputField = document.getElementById("input");
+            var responseField = document.getElementById("response");
+            var attempts = 0;
+            var playing = true;
+            function submitAnswer(){
+                if(!playing){
+                    hiddenPattern=getRandomPattern();
+                    attempts = 0;
+                    playing=true;
+                    printToUser("new game..");
+                    return;
+                }
+                var patternSubmitted = inputField.value;
+                if(!checkIfValid(patternSubmitted)){
+                    printToUser("Invalid pattern inputed");
+                    return;
+                }
+                checkPattern(patternSubmitted);
+                console.log("secret answer: " + hiddenPattern)
+            }   
+            function checkIfValid(pattern){
+                if(pattern.length != patternLength){
+                    return false;
+                }
+                for(var out=0; out<pattern.length;out++){
+                    for(var i=0; i<pattern.length;i++){
+                        if(i==out){
+                            continue;
+                        }
+                        if(pattern[i]==pattern[out]){
+                            return false
+                        }
+                    }
+                }
+                return true;
+            }     
+            function checkPattern(pattern){
+                var inCounter = 0;
+                attempts++;
+                for(var i=0;i<patternLength;i++){
+                    if(pattern[i] == hiddenPattern[i]){
+                        inCounter++;
+                    }
+                }
+                if(inCounter == patternLength){
+                    printToUser("You got it :) in " + attempts + " attempt(s). Hit the button again to start over");
+                    playing =false;
+                    return;
+                }
+                var outCounter = -inCounter;
+                for(var i=0;i<patternLength;i++){
+                    if(hiddenPattern.includes(pattern[i])){
+                        outCounter++;
+                    }
+                }
+                printInfo(inCounter,outCounter,pattern);
+            }
+            function getRandomPattern(){
+                var strArr = []
+                var str = ""
+                for(var i=0; i<patternLength;i++){
+                    var newNum = parseInt(Math.random()*10)
+                    while(strArr.includes(newNum)){
+                        newNum = parseInt(Math.random()*10)
+                    }
+                    strArr.push(newNum);
+                    str += newNum;
+                }
+
+                return str;
+            }
+            function printInfo(ins,outs,pattern){
+                var str="There is " + ins + " in(s).";
+                str+="There is " + outs + " out(s).";
+                str+="In the pattern " + pattern +".";
+                printToUser(str);
+            }
+            function printToUser(str){
+                responseField.innerHTML = str;
+            }
+        </script>
+
+
+    </body>
+
+</html>
