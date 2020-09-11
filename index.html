@@ -1,116 +1,160 @@
-  <!DOCTYPE html>
-  <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <title>Calvin's Webpage</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://scs.ryerson.ca/~cmozola/resources/bootstrap.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://scs.ryerson.ca/~cmozola/resources/bootstrap.css"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    
+
     <style>
-    .carousel-indicators li {
-    background-color: #E95420; 
-    }
-    .carousel-indicators .active {
+      .carousel-indicators li {
+        background-color: #e95420;
+      }
+      .carousel-indicators .active {
         background-color: LIGHTSALMON;
-    }
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-  height: 100px;
-  width: 100px;
-  background-size: 100%, 100%;
-  border-radius: 50%;
-  background-image: none;
-}
+      }
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        height: 100px;
+        width: 100px;
+        background-size: 100%, 100%;
+        border-radius: 50%;
+        background-image: none;
+      }
 
-.carousel-control-next-icon:after
-{
-  content: '>';
-  font-size: 55px;
-  color: #E95420;
-}
-.carousel-control-prev-icon:after {
-  content: '<';
-  font-size: 55px;
-  color: red;
-}
+      .carousel-control-next-icon:after {
+        content: ">";
+        font-size: 55px;
+        color: #e95420;
+      }
+      .carousel-control-prev-icon:after {
+        content: "<";
+        font-size: 55px;
+        color: red;
+      }
     </style>
-    
   </head>
-  <body style="background-color:LIGHTSALMON;">
+  <body style="background-color: LIGHTSALMON">
+    <nav class="navbar op navbar-dark bg-primary">
+      <div class="btn-group">
+        <a
+          href="coolStuff/game.html"
+          class="btn btn-info btn-lg"
+          role="button"
+          aria-pressed="true"
+          >Game</a
+        >
+        <a
+          href="coolStuff/boyzRef.html"
+          class="btn btn-info btn-lg"
+          role="button"
+          aria-pressed="true"
+          >Boyzz</a
+        >
+        <a
+          href="oldLabs/index.html"
+          class="btn btn-info btn-lg"
+          role="button"
+          aria-pressed="true"
+          >Old Labs</a
+        >
+        <a
+          href="#"
+          class="btn btn-info btn-lg"
+          role="button"
+          aria-pressed="true"
+          >Reference</a
+        >
+      </div>
 
-  <nav class="navbar op navbar-dark bg-primary">
-    
-    <div class="btn-group " >
-    <a href="coolStuff/game.html" class="btn btn-info btn-lg " role="button" aria-pressed="true">Game</a>
-     <a href="#" class="btn btn-info btn-lg " role="button" aria-pressed="true">Reference</a>
-      <a href="oldLabs/index.html" class="btn btn-info btn-lg " role="button" aria-pressed="true">Old Labs</a>
-       <a href="#" class="btn btn-info btn-lg " role="button" aria-pressed="true">last</a>
-       </div>
-    
-    <div class="btn-group">
-    <button type="button" class="btn btn-danger">Work in progress</button>
-    <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="sr-only">Toggle Dropdown</span>
-    </button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </div>
-  </div>   
-    
-    
-  </nav>
-
-  <div class="jumbotron bg-info jumbotron-fluid">
-    <div class="container">
-      <h1 class="display-4">Welcome</h1>
-      <p class="lead">This is my website</p>
-    </div>
-  </div>
-
-
-  <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carousel" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel" data-slide-to="1"></li>
-    </ol>
-    <div class="carousel-inner">
-    
-      <div class="carousel-item active">
-      <a href="https://www.google.com/">
-        <img src="https://avatars1.githubusercontent.com/u/8919750?s=88&v=4" class="d-block w-100" alt="My github image">
-        <div class="carousel-caption d-none d-md-block text-primary">
-          <h5>GitHub</h5>
-          <p>Check me out on Github</p>
+      <div class="btn-group">
+        <button type="button" class="btn btn-danger">Work in progress</button>
+        <button
+          type="button"
+          class="btn btn-danger dropdown-toggle dropdown-toggle-split"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Separated link</a>
         </div>
+      </div>
+    </nav>
+
+    <div class="jumbotron bg-info jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Welcome</h1>
+        <p class="lead">This is my website</p>
+      </div>
+    </div>
+
+    <div
+      id="carousel"
+      class="carousel slide carousel-fade"
+      data-ride="carousel"
+    >
+      <ol class="carousel-indicators">
+        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel" data-slide-to="1"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <a href="https://github.com/1mozolacal">
+            <img
+              src="https://avatars1.githubusercontent.com/u/8919750?s=88&v=4"
+              class="d-block w-100"
+              alt="My github image"
+            />
+            <div class="carousel-caption d-none d-md-block text-primary">
+              <h5>GitHub</h5>
+              <p>Check me out on Github</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="carousel-item">
+          <a href="https://linkedin.com/in/calvin-m-37688b13b">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Linkedin.svg/1200px-Linkedin.svg.png"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block text-primary">
+              <h5>Linked in</h5>
+              <p>Check me out on linked int</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <a
+        class="carousel-control-prev"
+        href="#carousel"
+        role="button"
+        data-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       </a>
-      </div>
-      
-      <div class="carousel-item">
-      <a href="https://www.google.com/">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Linkedin.svg/1200px-Linkedin.svg.png" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block text-primary" >
-          <h5>Linked in</h5>
-          <p>Check me out on linked int</p>
-        </div>
-        </a>
-      </div>
+      <a
+        class="carousel-control-next"
+        href="#carousel"
+        role="button"
+        data-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </a>
     </div>
-    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon " aria-hidden="true"></span>
-    </a>
-    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-
-    </a>
-  </div>
-
-
   </body>
-  </html>
+</html>
